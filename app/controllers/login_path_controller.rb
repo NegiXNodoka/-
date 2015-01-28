@@ -1,0 +1,2 @@
+class LoginPathController < ApplicationController
+end

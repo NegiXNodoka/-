@@ -1,0 +1,2 @@
+class SignupPathController < ApplicationController
+end

@@ -1,18 +1,20 @@
-<h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
+<% provide(:title, "Log in") %>
+<h1 align="center">Log in</h1>
 
-<%= form_for :verification do |f| %>
-  <p>
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </p>
- 
-  <p>
-    <%= f.label :password %><br>
-    <%= f.text_area :username %>
-  </p>
- 
-  <p>
-    <%= f.submit :login %>
-  </p>
-<% end %>
+<div class="row" align="center">
+  <div class="col-md-6 col-md-offset-8">
+    <%= form_for :login do |f| %>
+
+      <%= f.label :username %>
+      <%= f.email_field :username, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+
