@@ -1,0 +1,23 @@
+<% provide(:title, "Log in") %>
+
+
+<div class="row" align="center">
+  <div class="col-md-6 col-md-offset-8">
+  	<% if user_signed_in? %>
+        <h1> Restock Guns </h1>
+  	   	<%= form_tag("/buy", method: "get") do %>
+ 	        <%= label_tag(:name, "Name:") %>
+ 	        <%= text_field_tag(:name) %>
+ 	        <%= label_tag(:price, "Price:") %>
+ 	        <%= text_field_tag(:price) %>
+ 	        <%= label_tag(:stock, "Amount:") %>
+  	      <%= text_field_tag(:stock) %>
+ 	        <%= submit_tag("Buy") %>
+       <% end %>
+  	  	<a href="/shop/sell.html">buy guns</a>
+   	    <a href="/shop/main_Page.html">Main Page</a>
+	   <% else %>
+      	<h1 align="center">Welcome Customer</h1>
+   <% end %>
+  </div>
+</div>

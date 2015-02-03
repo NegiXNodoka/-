@@ -1,18 +1,23 @@
 Rails.application.routes.draw do
+  get 'shop/restock'
+
+  get 'shop/sell'
+  get 'shop/main_Page'
+  devise_for :users
+
   get 'sessions/new'
 
   get 'users/new'
 
   get 'login/index'
 
-  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'login#index'
-
+  root 'shop#main_Page'
+  resources :products
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
