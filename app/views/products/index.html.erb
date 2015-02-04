@@ -1,0 +1,25 @@
+<h1>Guns</h1>
+
+
+
+<table width="100%">
+  <tr>
+    <td>Name</td>
+    <td>Price</td>
+    <td>Stock</td>
+  </tr>
+  <% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= product.stock %></td>
+    <td>
+      <%= link_to "Show", product_path(product.id) %>
+      <%= link_to "Edit", edit_product_path(product.id) %>
+      <%= link_to "Destroy", product_path(product.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+    </td>
+  </tr>
+<% end %>
+</table>
+<%= link_to "New Gun", new_product_path %>
+<a href="/shop/main_Page.html">Main Page</a>

@@ -5,8 +5,8 @@
   <div class="col-md-6 col-md-offset-8">
   	<% if user_signed_in? %>
   		<h1> Main Page </h1>
-  		<a href="/shop/restock.html">restock guns</a>
-   	    <a href="/shop/sell.html">buy guns</a>
+  		<%= link_to "New Guns", new_product_path %>
+		<%= link_to "View All Guns", products_path %>
 	<% else %>
     	<h1 align="center">Welcome Customer</h1>
     <% end %>

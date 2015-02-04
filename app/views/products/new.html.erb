@@ -1,0 +1,11 @@
+<h1>new guns</h1>
+
+<%= simple_form_for(@product) do |f| %>
+<%= f.input :name %>
+<%= f.input :price %>
+<%= f.input :stock %>
+<hr>
+<%= f.submit "save gun" %>
+<% end %>
+
+<a href="/shop/main_Page.html">Main Page</a>
