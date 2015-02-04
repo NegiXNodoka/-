@@ -1,12 +1,14 @@
-<h1>Editing Guns</h1>
+<% if user_signed_in? %>
+	<h1>Editing Guns</h1>
 
-<%= simple_form_for(@product) do |f| %>
-<%= f.input :name %>
-<%= f.input :price %>
-<%= f.input :description %>
-<%= f.input :stock %>
-<hr>
-<%= f.submit "save gun" %>
+	<%= simple_form_for(@product) do |f| %>
+	<%= f.input :name %>
+	<%= f.input :price %>
+	<%= f.input :description %>
+	<%= f.input :stock %>
+	<hr>
+	<%= f.submit "save gun" %>
+	<% end %>
+	<%= link_to 'Show', @product %> 
+	<a href="/shop/main_Page.html">Main Page</a>
 <% end %>
-<%= link_to 'Show', @product %> 
-<a href="/shop/main_Page.html">Main Page</a>
