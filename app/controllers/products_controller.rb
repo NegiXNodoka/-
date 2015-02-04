@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 
 		if @product.update(product_params)
-			redirect to products_path
+			redirect_to products_path
 		end
 	end
 
